@@ -187,7 +187,7 @@ def green_fig(fig):
 # ── Data loading & model training (cached) ────────────────────────────────────
 @st.cache_data
 def load_and_train():
-    df = pd.read_csv("Dataset.csv")
+    df = pd.read_csv("/mnt/user-data/uploads/Dataset.csv")
 
     df_model = df[df["Element"] == "Agricultural Use"].copy()
     df_model.dropna(subset=["value", "Food loss percentage", "Item", "Sub-region Name"],
